@@ -1,0 +1,17 @@
+#search-container {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input {
+    width: 400px;
+    height: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    outline: none;
+    line-height: 30px;
+    margin-bottom: 30px;
+    border-color: #0ccac4;
+}
