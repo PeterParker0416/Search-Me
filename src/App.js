@@ -1,11 +1,36 @@
-import './App.css';
+import React, { Component } from 'react';
+// CSS Link
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      Search Me
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      users: []
+    }
+  }
+
+  usersApi = "https://jsonplaceholder.typicode.com/users";
+
+  // lifecycle method
+  componentDidMount() {
+    fetch(this.usersApi)
+      .then(res => res.json())
+      .then(users => {
+        this.setState({
+          users: users
+        });
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        Search Me
+      </div>
+    );
+  }
 }
 
 export default App;
